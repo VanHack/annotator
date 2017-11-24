@@ -1,9 +1,15 @@
 
-const api = {
-  login: () => ({ name: 'Renato' }),
+import Promise from 'bluebird';
 
-  register: () => ({ name: 'Renato' }),
-
+export default {
+  login: () => {
+    const promise = new Promise((resolve) => {
+      resolve({
+        name: 'Renato Oliveira',
+        email: 'renatorro@comp.ufla.br',
+        picture: 'renatorro@comp.ufla.br',
+      });
+    });
+    return promise;
+  },
 };
-
-export default api;

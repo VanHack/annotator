@@ -15,6 +15,7 @@
     "url": "https://github.com/renatorroliveira/annotator"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "jquery": "^3.2.1",
     "material-design-icons-iconfont-only": "^3.0.1",
     "materialize-css": "^0.100.2",
@@ -29,7 +30,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "string": "^3.3.3",
-    "typeface-roboto": "0.0.45"
+    "typeface-roboto": "0.0.45",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
@@ -50,6 +52,7 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "7.5.1",
     "file-loader": "^0.11.2",
+    "json-loader": "^0.5.7",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",

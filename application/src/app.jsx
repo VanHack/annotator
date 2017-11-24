@@ -4,7 +4,6 @@ import 'typeface-roboto'; // eslint-disable-line
 import 'jquery';
 import 'materialize-css';
 
-import S from 'string';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -18,19 +17,17 @@ import PDFLib from 'pdfjs-dist';
 import Application from '@/containers/Application';
 import rootReducer from '@/data';
 
-import { userLoggedIn, userLoggedOut } from '@/data/User/actions';
+import { login } from '@/data/User/actions';
 import '@/assets/styles/style.scss';
 
 PDFLib.PDFJS.workerSrc = 'pdfjs-worker-bundle.js';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, loggerMiddleware));
 
-const token = S(localStorage.feedbackToken);
-if (!token.isEmpty()) {
-  store.dispatch(userLoggedIn(token.s));
-} else {
-  store.dispatch(userLoggedOut());
-}
+// Check access token and then login or logout
+// Mocking always login, but this verification
+// could be done in the login action too.
+store.dispatch(login());
 
 ReactDOM.render(
   <Provider store={store}>
