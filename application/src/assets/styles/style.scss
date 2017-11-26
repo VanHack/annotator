@@ -6,6 +6,88 @@ html, body {
   background-color: #F0F4F6;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  & > main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    & > * {
+      flex: 1;
+    }
+  }
+}
+
+.document-view {
+  background-color: #333333;
+
+  & .document-header {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: center;
+    padding: 0px 25px;
+    z-index: 99;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    & > * {
+      line-height: 100%;
+      margin: 0px 10px;
+    }
+    & > .fill {
+      flex: 1;
+    }
+    & a {
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+
+  & .document-content {
+    min-height: 100%;
+    padding: 60px 20px 20px;
+  }
+}
+
+.html-document {
+  clear: both;
+  margin: 30px;
+  @media(max-width: 1000px) {
+    & {
+      margin: 30px 0px;
+    }
+  }
+
+  & figcaption {
+    margin-top: 0px;
+    text-align: center;
+  }
+  & img {
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.pdf-document {
+  overflow: auto;
+
+  & canvas {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
 .document-row {
   align-items: stretch;
   display: flex;

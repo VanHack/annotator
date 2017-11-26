@@ -55,6 +55,9 @@ module.exports = {
         test: /\.json$/,
         loaders: ['json-loader'],
       }, {
+        test: /\.pdf$/,
+        loaders: ['file-loader?name=documents/[name].[ext]'],
+      }, {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader', 'postcss-loader'],
       }, {

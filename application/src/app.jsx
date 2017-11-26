@@ -20,7 +20,7 @@ import rootReducer from '@/data';
 import { login } from '@/data/User/actions';
 import '@/assets/styles/style.scss';
 
-PDFLib.PDFJS.workerSrc = 'pdfjs-worker-bundle.js';
+PDFLib.PDFJS.workerSrc = '/pdfjs-worker-bundle.js';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, loggerMiddleware));
 
