@@ -53,6 +53,7 @@ html, body {
   }
 
   & .document-content {
+    background-color: inherit;
     min-height: 100%;
     padding: 60px 20px 20px;
   }
@@ -80,11 +81,14 @@ html, body {
 }
 
 .pdf-document {
+  background-color: inherit;
   overflow: auto;
-
-  & canvas {
-    display: block;
-    margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70;
+  & .page {
+    margin-bottom: 30px;
   }
 }
 

@@ -64,7 +64,7 @@ module.exports = {
         test: /\.html$/,
         loader: 'file-loader?name=[name].[ext]',
       }, {
-        test: /\.(jpg|png|svg)(\?v=[0-9].[0-9].[0-9])?$/,
+        test: /\.(jpg|png|svg|gif)(\?v=[0-9].[0-9].[0-9])?$/,
         loader: 'file-loader?name=images/[name].[ext]',
       }, {
         test: /\.(woff|woff2|ttf|eot)(\?v=[0-9].[0-9].[0-9])?$/,

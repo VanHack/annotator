@@ -12,7 +12,9 @@ import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import loggerMiddleware from 'redux-logger';
 
-import PDFLib from 'pdfjs-dist';
+import PDFLib from 'pdfjs-dist/build/pdf.combined';
+import 'pdfjs-dist/web/pdf_viewer';
+import 'pdfjs-dist/web/pdf_viewer.css';
 
 import Application from '@/containers/Application';
 import rootReducer from '@/data';
